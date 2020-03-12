@@ -1,13 +1,14 @@
 import React from "react"
 
 export default function User(props) {
-    const { name, title, direct_reports, image } = props
+    const { first_name, last_name, title, image, id, manager_id } = props
     return (
-        <>
-            <img src={image} alt=""/>
-            <h2>{name}</h2>
+        <div className="user">
+            <img className="user-img" src={image} alt=""/>
+            <h2>{first_name + ' ' + last_name}</h2>
             <h3>{title}</h3>
-            <p>{direct_reports}</p>
-        </>
+            <button className="btn edit-btn">Edit</button>
+            <button className="btn delete-btn">Delete</button>
+        </div>
     )
 }
