@@ -14,11 +14,6 @@
  *= require_self
  */
 
- body {
-    margin: 0;
-    padding: 0;
- }
-
 .home-heading {
     color: royalblue;
 }
@@ -28,9 +23,27 @@
     height: auto;
 }
 
+.users-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.add-user-link {
+    color: black;
+    text-decoration-line: underline;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.add-user-link:hover {
+    cursor: pointer;
+}
+
 .users-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .user {
@@ -38,6 +51,21 @@
     border: 2px solid black;
     border-radius: 5px;
     margin: 10px;
+}
+
+.user-form {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    padding: 5px;
+}
+
+.user-form input {
+    display: block;
+    margin: 5px;
 }
 
 .btn {
@@ -54,4 +82,8 @@
 
 .delete-btn {
     background-color: firebrick;
+}
+
+.submit-btn {
+    background-color: royalblue;
 }
