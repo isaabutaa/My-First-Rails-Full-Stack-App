@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Note: I did have to create a super user role and a password during my installation of postgreSQL and setting up the database, so I'm not sure how that will impact someone else trying to clone the repository and run the server on their local computer. 
 
-Things you may want to cover:
+* Ruby version '2.6.3'
 
-* Ruby version
+* Rails version '6.0.2.1'
 
-* System dependencies
+* System dependencies:
 
-* Configuration
+    axios '0.19.2'
+    react '16.13.0'
+    react-dom '16.13.0'
+    react-router-dom '5.1.2'
+    react-json-pretty '2.2.0'
 
-* Database creation
+* Tutorial I followed for setting up the database with postgreSQL and also using React with Rails:
 
-* Database initialization
+    https://www.digitalocean.com/community/tutorials/how-to-set-up-a-ruby-on-rails-project-with-a-react-frontend
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-18-04
