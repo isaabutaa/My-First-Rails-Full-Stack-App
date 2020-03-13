@@ -2,7 +2,11 @@ import React, { useState } from "react"
 
 export default function UserForm(props) {
     const { submit, btnTxt } = props
-    const initInputs = {first_name: "", last_name: "", title: ""}
+    const initInputs = {
+        first_name: props.first_name || "", 
+        last_name: props.last_name || "", 
+        title: props.title || ""
+    }
     const [inputs, setInputs] = useState(initInputs)
 
     function handleChange(e) {
@@ -15,7 +19,7 @@ export default function UserForm(props) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        submit(inputs)
+        submit(inputs, props.id)
         setInputs(initInputs)
     }
 

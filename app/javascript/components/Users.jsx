@@ -10,7 +10,7 @@ const headersObj = {headers: {"X-CSRF-Token": token, "Content-Type": "applicatio
 export default function Users() {
     const [users, setUsers] = useState([])
     const [toggleAddUserForm, setToggleAddUserForm] = useState(false)
-    const allUsers = users.reverse().map(user => <User key={user.id} {...user} deleteUser={deleteUser} />)
+    const allUsers = users.reverse().map(user => <User key={user.id} {...user} deleteUser={deleteUser} editUser={editUser} />)
 
     useEffect(() => {
         getUsers()
@@ -42,6 +42,12 @@ export default function Users() {
                     prevUsers.filter(user => user.id !== userId)
                 ]))
             })
+            .catch(err => console.log(err))
+    }
+
+    function editUser(updatedUserObj, userId) {
+        axios.put(`api/v1/users/update/${userId}`, updatedUserObj, headersObj)
+            .then(res => console.log(res))
             .catch(err => console.log(err))
     }
 
