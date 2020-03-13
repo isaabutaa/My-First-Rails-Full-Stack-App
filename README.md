@@ -19,3 +19,12 @@
     https://www.digitalocean.com/community/tutorials/how-to-set-up-a-ruby-on-rails-project-with-a-react-frontend
 
     https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-18-04
+
+* Homepage:
+![Homepage screenshot](/app/assets/images/rails-homepage.png)
+
+* Users:
+![Users page screenshot](/app/assets/images/rails-users.png)
+
+* JSON data display:
+![JSON data display page](/app/assets/images/rails-json.png)
