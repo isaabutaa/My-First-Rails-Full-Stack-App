@@ -5,11 +5,12 @@ import User from "./User"
 import UserForm from "./UserForm"
 
 const token = document.querySelector('meta[name="csrf-token"]').content
+const headersObj = {headers: {"X-CSRF-Token": token, "Content-Type": "application/json"}}
 
 export default function Users() {
     const [users, setUsers] = useState([])
     const [toggleAddUserForm, setToggleAddUserForm] = useState(false)
-    const allUsers = users.reverse().map(user => <User key={user.id} {...user} />)
+    const allUsers = users.reverse().map(user => <User key={user.id} {...user} deleteUser={deleteUser} />)
 
     useEffect(() => {
         getUsers()
@@ -24,8 +25,19 @@ export default function Users() {
     }
 
     function createUser(newUser) {
-        axios.post("/api/v1/users/create", newUser, {headers: {"X-CSRF-Token": token, "Content-Type": "application/json"}})
-            .then(res => console.log(res.data))
+        axios.post("/api/v1/users/create", newUser, headersObj)
+            .then(res => {
+                setUsers(prevUsers => ([
+                    ...prevUsers,
+                    res.data
+                ]))
+            })
+            .catch(err => console.log(err))
+    }
+
+    function deleteUser(userId) {
+        axios.delete(`api/v1/users/destroy/${userId}`, headersObj)
+            .then(res => console.log(res))
             .catch(err => console.log(err))
     }
 
