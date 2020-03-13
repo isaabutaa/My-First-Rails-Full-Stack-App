@@ -1,6 +1,6 @@
 # README
 
-Note: I did have to create a super user role and a password during my installation of postgreSQL and setting up the database, so I'm not sure how that will impact someone else trying to clone the repository and run the server on their local computer. 
+**Note: I did have to create a super user role and a password during my installation of postgreSQL and setting up the database, so I'm not sure how that will impact someone else trying to clone the repository and run the server on their local computer. 
 
 * Ruby version '2.6.3'
 
@@ -8,11 +8,11 @@ Note: I did have to create a super user role and a password during my installati
 
 * System dependencies:
 
-    axios '0.19.2'
-    react '16.13.0'
-    react-dom '16.13.0'
-    react-router-dom '5.1.2'
-    react-json-pretty '2.2.0'
+    * axios '0.19.2'
+    * react '16.13.0'
+    * react-dom '16.13.0'
+    * react-router-dom '5.1.2'
+    * react-json-pretty '2.2.0'
 
 * Tutorial I followed for setting up the database with postgreSQL and also using React with Rails:
 
