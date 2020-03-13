@@ -1,6 +1,11 @@
 # README
 
-**Note: I did have to create a super user role and a password during my installation of postgreSQL and setting up the database, so I'm not sure how that will impact someone else trying to clone the repository and run the server on their local computer. 
+* How the app works: 
+    * At the home page, you click 'Users' or 'UsersJSON' to be directed to their respective pages. On the 'Users' page, you can view all existing users in individuals cards/tiles. You can also add a new user, edit an existing user's first name, last name, and title, and delete a user. With the edit and delete functions, you have to refresh the page afterwards in order to see the changes rendered on the page. 
+    * On the 'UsersJSON' page, you can view the JSON representation of all the users and their data. I used an npm package called react-json-pretty to make it more readable.
+    * With what I have so far, I was unable to show a nested organizational structure. I think I would have to run a new migration to add a direct_reports column to the database, and then see if I could somehow add users to that array using their manager_id key property.
+
+* **Note: I did have to create a super user role and a password during my installation of postgreSQL and setting up the database, so I'm not sure how that will impact someone else trying to clone the repository and run the server on their local computer. 
 
 * Ruby version '2.6.3'
 
