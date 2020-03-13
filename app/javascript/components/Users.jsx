@@ -37,7 +37,11 @@ export default function Users() {
 
     function deleteUser(userId) {
         axios.delete(`api/v1/users/destroy/${userId}`, headersObj)
-            .then(res => console.log(res))
+            .then(res => {
+                setUsers(prevUsers => ([
+                    prevUsers.filter(user => user.id !== userId)
+                ]))
+            })
             .catch(err => console.log(err))
     }
 
