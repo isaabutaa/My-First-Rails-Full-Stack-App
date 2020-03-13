@@ -20,11 +20,22 @@
 
     https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-18-04
 
-* Homepage:
+* Simple homepage:
+
 ![Homepage screenshot](/app/assets/images/rails-homepage.png)
 
 * Users:
+
 ![Users page screenshot](/app/assets/images/rails-users.png)
 
+* Add new user form:
+
+![Add new user screenshot](/app/assets/images/rails-add-user.png)
+
+* Edit user form:
+
+![Edit user form screenshot](/app/assets/images/rails-edit-user.png)
+
 * JSON data display:
+
 ![JSON data display page](/app/assets/images/rails-json.png)
