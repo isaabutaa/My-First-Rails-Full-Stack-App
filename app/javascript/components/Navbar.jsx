@@ -3,9 +3,10 @@ import { Link } from "react-router-dom"
 
 export default function Navbar() {
     return (
-        <div>
-            <Link to="/">Home</Link>
-            <Link to="/users">Users</Link>
+        <div className="navbar">
+            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/users">Users</Link>
+            <Link className="nav-link" to="/users-json">Users JSON</Link>
         </div>
     )
 }

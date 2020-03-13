@@ -3,7 +3,7 @@ import React from "react"
 
 export default function Home() {
     return (
-        <div>
+        <div className="home">
             <h1 className="home-heading">Organizational Relationship API</h1>
         </div>
     )
